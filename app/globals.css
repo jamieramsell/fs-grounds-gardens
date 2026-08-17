@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/*
+ * Brand tokens (PLACEHOLDER values).
+ * Replace these hexes with the exact colours from the FS branding sheet.
+ * Tailwind v4 turns each --color-* into utilities, e.g. bg-brand, text-ink,
+ * border-brand-accent.
+ */
+@theme {
+  --color-brand: #1b4332; /* primary deep green */
+  --color-brand-dark: #081c15; /* near-black green */
+  --color-brand-light: #2d6a4f; /* mid green */
+  --color-brand-accent: #52b788; /* fresh accent green */
+  --color-cream: #f7f9f7; /* off-white surface */
+  --color-ink: #111714; /* near-black text */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
