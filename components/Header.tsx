@@ -44,7 +44,7 @@ export default function Header() {
         <ul className="hidden gap-6 md:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <Link href={link.href} className={focusRing}>
+              <Link href={link.href} className={`hover:underline ${focusRing}`}>
                 {link.label}
               </Link>
             </li>
@@ -73,7 +73,7 @@ export default function Header() {
                 href={link.href}
                 // Close the menu after tapping on a link so that it doesn't cover the page
                 onClick={() => setIsOpen(false)}
-                className={focusRing}
+                className={`{focusRing} hover:underline`}
               >
                 {link.label}
               </Link>
