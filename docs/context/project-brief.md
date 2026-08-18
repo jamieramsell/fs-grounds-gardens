@@ -17,9 +17,14 @@
 - **Service area (provisional):** Charnwood, Melton & Leicester city — _cousin to confirm final list._
 - **Inspiration reference:** "Vinny's" site (has Book Online / Subscribe). Runs on GoDaddy.
 
+## Approved copy
+
+- **Home-page meta description** (set in `app/layout.tsx`, M1/#1): "Reliable garden maintenance based in Rothley, Leicestershire. Hedge trimming, lawns, pruning, clearances and tidy-ups. Get a free quote today." (~139 chars.) Uses "Leicestershire" broadly rather than the provisional Charnwood/Melton/Leicester list until Fred confirms the area. Per-page descriptions get set in M5's SEO pass.
+- **Brand font:** Montserrat (via `next/font/google`), matching the branding-sheet wordmark. Confirm with Fred if unsure.
+
 ## Role & goals
 
-- Jamie is **building the site for his cousin**; cousin owns the business and the assets.
+- Jamie is **building the site for his cousin Fred**; Fred owns the business and the assets.
 - Deadline: **~2 weeks** for a release-ready v1.
 - Assets: **placeholder photos to start**; real photos/copy/service-area/phone/socials come from cousin later.
 
