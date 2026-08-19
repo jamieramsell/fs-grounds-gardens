@@ -1,5 +1,6 @@
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -19,10 +20,16 @@ export default function Hero() {
             </div>
 
             {/* placeholder hero image — swap for a real photo later */}
-            <div
-              className="bg-brand-light/20 aspect-[4/3] rounded-lg"
-              aria-hidden="true"
-            />
+            <div className="bg-brand-light/20 relative aspect-[4/3] overflow-hidden rounded-lg">
+              <Image
+                src="/hero.jpeg"
+                alt="A freshly maintained garden with trimmed hedges and a striped lawn"
+                fill
+                priority
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </Container>
       </div>
