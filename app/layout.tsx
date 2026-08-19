@@ -23,7 +23,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en-GB" className={`${montserrat.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <Header />
-        {children}
+        <main id="main" tabIndex={-1}>
+          {children}
+        </main>{" "}
+        {/* Main block used for keyboard navigation */}
         <Footer />
       </body>
     </html>
