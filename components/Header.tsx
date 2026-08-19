@@ -11,9 +11,6 @@ const navLinks = [
   { href: "#contact", label: "Contact" },
 ];
 
-const focusRing =
-  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white";
-
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -36,7 +33,7 @@ export default function Header() {
   return (
     <header className="bg-brand sticky top-0 z-50 text-white">
       <nav className="mx-auto flex max-w-5xl items-center justify-between p-4">
-        <Link href="/" className={`text-xl font-bold ${focusRing}`}>
+        <Link href="/" className="text-xl font-bold">
           FS Grounds &amp; Gardens
         </Link>
 
@@ -44,7 +41,7 @@ export default function Header() {
         <ul className="hidden gap-6 md:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <Link href={link.href} className={`hover:underline ${focusRing}`}>
+              <Link href={link.href} className="hover:underline">
                 {link.label}
               </Link>
             </li>
@@ -58,7 +55,7 @@ export default function Header() {
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
           aria-label={isOpen ? "Close menu" : "Open menu"}
-          className={`md:hidden ${focusRing}`}
+          className="md:hidden"
         >
           {isOpen ? "✕" : "☰"}
         </button>
@@ -73,7 +70,7 @@ export default function Header() {
                 href={link.href}
                 // Close the menu after tapping on a link so that it doesn't cover the page
                 onClick={() => setIsOpen(false)}
-                className={`{focusRing} hover:underline`}
+                className="hover:underline"
               >
                 {link.label}
               </Link>
