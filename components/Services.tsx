@@ -1,5 +1,15 @@
 import type { LucideIcon } from "lucide-react";
-import { Scissors, Sprout, Flower2, Trash2, Leaf } from "lucide-react";
+import {
+  Scissors,
+  Sprout,
+  Flower2,
+  Trash2,
+  Leaf,
+  House,
+  Hammer,
+  Droplets,
+  Sparkles,
+} from "lucide-react";
 import Section from "./ui/Section";
 import Card from "./ui/Card";
 
@@ -34,6 +44,26 @@ const services: Service[] = [
     title: "Garden maintenance",
     description: "Regular visits to keep everything looking its best.",
     icon: Leaf,
+  },
+  {
+    title: "Sheds & summerhouses",
+    description: "Quality sheds and summerhouses supplied to suit your space.",
+    icon: House,
+  },
+  {
+    title: "Base & installation",
+    description: "Level bases laid and your new building fully erected.",
+    icon: Hammer,
+  },
+  {
+    title: "Patio & drive cleaning",
+    description: "Patios, paths and driveways pressure washed like new.",
+    icon: Droplets,
+  },
+  {
+    title: "Conservatory & roof cleaning",
+    description: "Conservatory roofs and glazing cleaned until they gleam.",
+    icon: Sparkles,
   },
 ];
 
