@@ -1,0 +1,15 @@
+export const serviceAreas = [
+  "Leicester",
+  "Loughborough",
+  "Shepshed",
+  "Melton Mowbray",
+  "Rothley",
+  "Mountsorrel",
+  "Cropston",
+  "Anstey",
+  "Birstall",
+  "Thurcaston",
+  "Quorn",
+  "Sileby",
+  "Syston",
+];
