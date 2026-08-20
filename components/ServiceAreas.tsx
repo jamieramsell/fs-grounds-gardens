@@ -22,8 +22,11 @@ export default function ServiceAreas() {
           ))}
         </ul>
         <p className="text-ink/80">
-          If in doubt, don&apos;t hesitate to contact us. We&apos;re always
-          happy to help!
+          If in doubt, don&apos;t hesitate to{" "}
+          <a href="#contact" className="hover:underline">
+            contact us.
+          </a>{" "}
+          We&apos;re always happy to help!
         </p>
       </div>
     </Section>
