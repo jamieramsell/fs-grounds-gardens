@@ -24,6 +24,10 @@ export default function About() {
           <ul className="text-ink/80 space-y-2 pl-5">
             <li className="text-ink/80 flex items-center gap-2">
               {" "}
+              <Check className="text-brand-accent h-5 w-5" /> Fully insured
+            </li>
+            <li className="text-ink/80 flex items-center gap-2">
+              {" "}
               <Check className="text-brand-accent h-5 w-5" /> Locally owned and
               run
             </li>
