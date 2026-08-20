@@ -33,13 +33,12 @@ export default function About() {
             </li>
             <li className="text-ink/80 flex items-center gap-2">
               {" "}
-              <Check className="text-brand-accent h-5 w-5" /> Reliable, on-time
-              visits
+              <Check className="text-brand-accent h-5 w-5" /> Reliable
             </li>
             <li className="text-ink/80 flex items-center gap-2">
               {" "}
-              <Check className="text-brand-accent h-5 w-5" /> Careful attention
-              to detail
+              <Check className="text-brand-accent h-5 w-5" /> Attentive to
+              detail
             </li>
           </ul>
         </div>
