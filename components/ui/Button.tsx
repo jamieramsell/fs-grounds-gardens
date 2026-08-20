@@ -27,9 +27,24 @@ export default function Button({
   href,
   variant = "primary",
 }: ButtonProps) {
+  const classes = `${base} ${variants[variant]}`;
+
+  if (href.startsWith("#") || href.startsWith("/")) {
+    return (
+      <Link href={href} className={classes}>
+        {children}
+      </Link>
+    );
+  }
+
   return (
-    <Link href={href} className={`${base} ${variants[variant]}`}>
+    <a
+      href={href}
+      className={classes}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {children}
-    </Link>
+    </a>
   );
 }
