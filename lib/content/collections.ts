@@ -7,7 +7,7 @@ import { z } from "zod";
  * Reads a content collection from `content/<folder>`, validating every `.md`
  * file's front matter against the given schema.
  * @param folder - the collection's folder name under `content/` (e.g. "gallery")
- * @param schema - the zod schema thar each file's front matter must satisfy
+ * @param schema - the zod schema that each file's front matter must satisfy
  * @returns an array of validated items, typed to the schema
  * @remarks Server/build-time only — it reads the file system.
  */
