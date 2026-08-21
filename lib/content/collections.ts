@@ -27,8 +27,10 @@ export default function loadCollection<T>(
   const collectionItems = files.map((filename) => {
     const filePath = path.join(folderPath, filename);
     const fileContent = fs.readFileSync(filePath, "utf-8");
-    const { data } = matter(fileContent);
-    return schema.parse(data);
+    const { data, content } = matter(fileContent);
+
+    // Zod ignores keys it doesn't recognise, so this works for collections with and without a declared body attribute
+    return schema.parse({ ...data, body: content });
   });
 
   return collectionItems;

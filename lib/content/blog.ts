@@ -10,3 +10,15 @@ export const blogPostSchema = z.object({
 });
 
 export type BlogPost = z.infer<typeof blogPostSchema>;
+
+/**
+ * Loads all blog posts from `content/blog`, sorted by their `order` field.
+ * @returns the blog posts in date order (newest first)
+ */
+export function getBlogPosts(): BlogPost[] {
+  const blogPosts = loadCollection("blog", blogPostSchema);
+
+  // Sort blogPosts into date order (newest first) and return
+  blogPosts.sort((a, b) => b.date.getTime() - a.date.getTime());
+  return blogPosts;
+}
