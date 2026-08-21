@@ -9,12 +9,14 @@ type GalleryProps = {
 
 function GallerySection({ children }: GalleryProps) {
   return (
-    <Section id="gallery">
-      <div className="space-y-6">
-        <h2 className="text-brand text-3xl font-bold">Gallery</h2>
-        {children}
-      </div>
-    </Section>
+    <div className="bg-cream">
+      <Section id="gallery">
+        <div className="space-y-6">
+          <h2 className="text-brand text-3xl font-bold">Gallery</h2>
+          {children}
+        </div>
+      </Section>
+    </div>
   );
 }
 
