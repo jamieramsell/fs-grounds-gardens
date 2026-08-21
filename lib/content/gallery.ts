@@ -11,6 +11,10 @@ export const galleryItemSchema = z.object({
 
 export type GalleryItem = z.infer<typeof galleryItemSchema>;
 
+/**
+ * Loads all gallery items from `content/gallery`, sorted by their `order` field.
+ * @returns the gallery items in display order
+ */
 export function getGallery(): GalleryItem[] {
   const galleryItems = loadCollection("gallery", galleryItemSchema);
 
