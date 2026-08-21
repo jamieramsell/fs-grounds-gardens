@@ -2,7 +2,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-brand text-white">
+    <footer className="bg-brand-dark text-white">
       <div className="mx-auto flex max-w-5xl flex-col gap-6 p-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="space-y-1">
           <p>© {year} FS Grounds &amp; Gardens</p>
