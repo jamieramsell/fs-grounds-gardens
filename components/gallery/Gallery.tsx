@@ -2,6 +2,7 @@ import { getGallery } from "@/lib/content/gallery";
 import Section from "../ui/Section";
 import type { ReactNode } from "react";
 import GalleryGrid from "./GalleryGrid";
+import Button from "../ui/Button";
 
 type GalleryProps = {
   children: ReactNode;
@@ -34,6 +35,7 @@ export default function Gallery() {
   return (
     <GallerySection>
       <GalleryGrid items={teaser} />
+      <Button href="/gallery">View all photos</Button>
     </GallerySection>
   );
 }
