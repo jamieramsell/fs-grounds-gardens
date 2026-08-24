@@ -1,8 +1,8 @@
 import GalleryGrid from "@/components/gallery/GalleryGrid";
 import Section from "@/components/ui/Section";
 import { getGallery } from "@/lib/content/gallery";
-import { Metadata } from "next";
-import { ReactNode } from "react";
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
 
 type GalleryPageSectionProps = {
   children: ReactNode;
