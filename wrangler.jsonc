@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fs-grounds-gardens",
+  "compatibility_date": "2026-08-20",
+  // Serve the static export from `next build` (output: "export" -> out/).
+  // No Worker script, no OpenNext: Workers serves these files directly.
+  "assets": {
+    "directory": "./out",
+    // Serve out/404.html for unmatched paths instead of a bare 404.
+    "not_found_handling": "404-page"
+  }
+}
