@@ -3,6 +3,30 @@
 import type { GalleryItem } from "@/lib/content/gallery";
 import { useState, useEffect } from "react";
 
+type LightboxImageProps = {
+  src: string;
+  alt: string;
+  label?: "before" | "after";
+};
+
+function LightboxImage({ src, alt, label }: LightboxImageProps) {
+  return (
+    <div className="relative mx-auto w-fit">
+      <img
+        src={src}
+        alt={alt}
+        className="max-h-[70vh] w-auto max-w-full rounded object-contain max-md:max-h-[38vh]"
+      ></img>
+
+      {label && (
+        <p className="absolute top-4 left-4 rounded bg-black/70 px-4 py-2 text-white">
+          {label}
+        </p>
+      )}
+    </div>
+  );
+}
+
 type GalleryGridProps = {
   items: GalleryItem[];
 };
@@ -59,10 +83,30 @@ export default function GalleryGrid({ items }: GalleryGridProps) {
           role="dialog"
           onClick={() => setFocusedItem(null)}
         >
+          {/* A panel containing two images is double the width of a panel that
+           * only contains one */}
           <div
-            className="relative w-full max-w-3xl"
+            className={`relative mx-auto w-full ${focusedItem.before ? "max-w-6xl" : "max-w-3xl"}`}
             onClick={(e) => e.stopPropagation()}
           >
+            {focusedItem.before ? (
+              <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
+                <LightboxImage
+                  src={focusedItem.before}
+                  alt={focusedItem.alt}
+                  label="before"
+                />
+
+                <LightboxImage
+                  src={focusedItem.image}
+                  alt={focusedItem.alt}
+                  label="after"
+                />
+              </div>
+            ) : (
+              <LightboxImage src={focusedItem.image} alt={focusedItem.alt} />
+            )}
+
             <button
               type="button"
               className="hover:bg-brand-accent absolute top-2 right-2 flex h-8 w-8 items-center justify-center rounded-full bg-black/50 text-white transition duration-200"
@@ -71,12 +115,6 @@ export default function GalleryGrid({ items }: GalleryGridProps) {
             >
               ✕
             </button>
-
-            <img
-              src={focusedItem.image}
-              alt={focusedItem.alt}
-              className="max-h-[80vh] w-full rounded object-contain"
-            ></img>
 
             <p className="mt-2 text-center text-sm text-white">
               {focusedItem.caption}
