@@ -21,9 +21,9 @@ function GallerySection({ children }: GalleryProps) {
 }
 
 export default function Gallery() {
-  const items = getGallery();
+  const teaser = getGallery().slice(0, 6);
 
-  if (items.length === 0) {
+  if (teaser.length === 0) {
     return (
       <GallerySection>
         <p className="text-ink/70 mt-1">Photos coming soon</p>
@@ -33,7 +33,7 @@ export default function Gallery() {
 
   return (
     <GallerySection>
-      <GalleryGrid items={items} />
+      <GalleryGrid items={teaser} />
     </GallerySection>
   );
 }
