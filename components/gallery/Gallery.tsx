@@ -1,0 +1,42 @@
+import { getGallery } from "@/lib/content/gallery";
+import Section from "../ui/Section";
+import type { ReactNode } from "react";
+import GalleryGrid from "./GalleryGrid";
+import Button from "../ui/Button";
+
+type GalleryProps = {
+  children: ReactNode;
+};
+
+function GallerySection({ children }: GalleryProps) {
+  return (
+    <div className="bg-cream">
+      <Section id="gallery">
+        <div className="space-y-6">
+          <h2 className="text-brand text-3xl font-bold">Photo gallery</h2>
+          {children}
+        </div>
+      </Section>
+    </div>
+  );
+}
+
+export default function Gallery() {
+  const items = getGallery();
+  const teaser = items.slice(0, 6);
+
+  if (teaser.length === 0) {
+    return (
+      <GallerySection>
+        <p className="text-ink/70 mt-1">Photos coming soon</p>
+      </GallerySection>
+    );
+  }
+
+  return (
+    <GallerySection>
+      <GalleryGrid items={teaser} />
+      {items.length > 6 && <Button href="/gallery">View all photos</Button>}
+    </GallerySection>
+  );
+}

@@ -4,7 +4,7 @@ import Link from "next/link";
 type ButtonProps = {
   children: ReactNode;
   href: string;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "light" | "lightOutline";
 };
 
 // Common button styles, and ones unique to either variant
@@ -14,6 +14,8 @@ const base =
 const variants = {
   primary: "bg-brand text-white hover:bg-brand-dark",
   secondary: "border border-brand text-brand hover:bg-brand hover:text-white",
+  light: "bg-white text-brand hover:bg-brand-light hover:text-white",
+  lightOutline: "border-2 border-brand-light text-white hover:bg-brand-light",
 };
 
 /**
