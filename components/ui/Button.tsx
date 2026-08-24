@@ -15,8 +15,7 @@ const variants = {
   primary: "bg-brand text-white hover:bg-brand-dark",
   secondary: "border border-brand text-brand hover:bg-brand hover:text-white",
   light: "bg-white text-brand hover:bg-brand-light hover:text-white",
-  lightOutline:
-    "border border-white text-white hover:bg-white hover:text-brand",
+  lightOutline: "border-2 border-brand-light text-white hover:bg-brand-light",
 };
 
 /**
