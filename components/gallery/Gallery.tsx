@@ -22,7 +22,8 @@ function GallerySection({ children }: GalleryProps) {
 }
 
 export default function Gallery() {
-  const teaser = getGallery().slice(0, 6);
+  const items = getGallery();
+  const teaser = items.slice(0, 6);
 
   if (teaser.length === 0) {
     return (
@@ -35,7 +36,7 @@ export default function Gallery() {
   return (
     <GallerySection>
       <GalleryGrid items={teaser} />
-      <Button href="/gallery">View all photos</Button>
+      {items.length > 6 && <Button href="/gallery">View all photos</Button>}
     </GallerySection>
   );
 }
