@@ -8,7 +8,13 @@ type GalleryProps = {
   children: ReactNode;
 };
 
-function GallerySection({ children }: GalleryProps) {
+/**
+ * GalleryTeaserSection - the homepage gallery teaser band: a cream Section with
+ * the "Photo gallery" heading, wrapping whatever content it's given.
+ * @param children - the section's content (the teaser grid, or an empty-state
+ * message)
+ */
+function GalleryTeaserSection({ children }: GalleryProps) {
   return (
     <div className="bg-cream">
       <Section id="gallery">
@@ -21,22 +27,26 @@ function GallerySection({ children }: GalleryProps) {
   );
 }
 
-export default function Gallery() {
+/**
+ * GalleryTeaser - the homepage gallery teaser. Shows the first six photos, and
+ * a link through to the full `/gallery` page.
+ */
+export default function GalleryTeaser() {
   const items = getGallery();
   const teaser = items.slice(0, 6);
 
   if (teaser.length === 0) {
     return (
-      <GallerySection>
+      <GalleryTeaserSection>
         <p className="text-ink/70 mt-1">Photos coming soon</p>
-      </GallerySection>
+      </GalleryTeaserSection>
     );
   }
 
   return (
-    <GallerySection>
+    <GalleryTeaserSection>
       <GalleryGrid items={teaser} />
       {items.length > 6 && <Button href="/gallery">View all photos</Button>}
-    </GallerySection>
+    </GalleryTeaserSection>
   );
 }

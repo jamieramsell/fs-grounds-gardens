@@ -3,7 +3,7 @@ import Services from "@/components/Services";
 import About from "@/components/About";
 import ServiceAreas from "@/components/ServiceAreas";
 import Contact from "@/components/Contact";
-import Gallery from "@/components/gallery/Gallery";
+import GalleryTeaser from "@/components/gallery/Gallery";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <Services />
       <About />
       <ServiceAreas />
-      <Gallery />
+      <GalleryTeaser />
       <Contact />
     </div>
   );

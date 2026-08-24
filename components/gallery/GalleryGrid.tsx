@@ -9,6 +9,13 @@ type LightboxImageProps = {
   label?: "before" | "after";
 };
 
+/**
+ * LightboxImage - a single photo shown inside the lightbox, sized to fit, and
+ * optionally tagged with a corner label.
+ * @param src - the image URL (a path under `public/`)
+ * @param alt - alternative text describing the photo
+ * @param label - optional "before" / "after" badge shown over the image
+ */
 function LightboxImage({ src, alt, label }: LightboxImageProps) {
   return (
     <div className="relative mx-auto w-fit">
@@ -31,6 +38,12 @@ type GalleryGridProps = {
   items: GalleryItem[];
 };
 
+/**
+ * GalleryGrid - a client-side masonry grid of gallery photos. Clicking a
+ * thumbnail opens it in a lightbox dialog, which shows a before/after pair
+ * when the item has a `before` image.
+ * @param items - the gallery items to display, in order
+ */
 export default function GalleryGrid({ items }: GalleryGridProps) {
   const [focusedItem, setFocusedItem] = useState<GalleryItem | null>(null);
 
