@@ -1,6 +1,6 @@
 ---
-author: "Jamie Ramsell"
+author: "Freddie Smith"
 quote: "Excellent service and a very reasonable price"
-rating: 5
-order: 1
+rating: 4
+order: 2
 ---
