@@ -23,7 +23,7 @@ export default function ServiceAreas() {
         </ul>
         <p className="text-ink/80">
           If in doubt, don&apos;t hesitate to{" "}
-          <a href="#contact" className="hover:underline">
+          <a href="#contact" className="text-brand-accent hover:underline">
             contact us.
           </a>{" "}
           We&apos;re always happy to help!
