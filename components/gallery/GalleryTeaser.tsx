@@ -16,14 +16,12 @@ type GalleryProps = {
  */
 function GalleryTeaserSection({ children }: GalleryProps) {
   return (
-    <div className="bg-cream">
-      <Section id="gallery">
-        <div className="space-y-6">
-          <h2 className="text-brand text-3xl font-bold">Photo gallery</h2>
-          {children}
-        </div>
-      </Section>
-    </div>
+    <Section id="gallery">
+      <div className="space-y-6">
+        <h2 className="text-brand text-3xl font-bold">Photo gallery</h2>
+        {children}
+      </div>
+    </Section>
   );
 }
 

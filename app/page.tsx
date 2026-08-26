@@ -4,6 +4,7 @@ import About from "@/components/About";
 import ServiceAreas from "@/components/ServiceAreas";
 import Contact from "@/components/Contact";
 import GalleryTeaser from "@/components/gallery/GalleryTeaser";
+import ReviewsTeaser from "@/components/reviews/ReviewTeaser";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <Services />
       <About />
+      <ReviewsTeaser />
       <ServiceAreas />
       <GalleryTeaser />
       <Contact />
