@@ -1,5 +1,3 @@
-"use client";
-
 import type { Review } from "@/lib/content/reviews";
 import Card from "../ui/Card";
 import { Star } from "lucide-react";
