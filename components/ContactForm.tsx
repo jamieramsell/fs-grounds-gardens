@@ -192,24 +192,25 @@ export default function ContactForm() {
       </button>
 
       {/* Status messages */}
-      {status === "success" && (
-        <p className="text-ink/80" role="status">
-          Thank you, we&apos;ve received your message, and we&apos;ll be in
-          touch soon.
-        </p>
-      )}
+      <p className="text-ink/80" role="status">
+        {status === "success" &&
+          "Thank you, we've received your message, and we'll be in touch soon."}
+      </p>
 
-      {status === "error" && (
-        <p className="text-red-600" role="alert">
-          Something went wrong when sending your message. Please try again, or{" "}
-          <a
-            href="mailto:enquiries@fsgroundsandgardens.co.uk"
-            className="text-brand-accent hover:underline"
-          >
-            email us directly.
-          </a>{" "}
-        </p>
-      )}
+      <p role="alert" className="font-medium text-red-600">
+        {status === "error" && (
+          <>
+            Something went wrong. Please try again, or{" "}
+            <a
+              href="mailto:enquiries@fsgroundsandgardens.co.uk"
+              className="underline"
+            >
+              email us directly
+            </a>
+            .
+          </>
+        )}
+      </p>
     </form>
   );
 }
