@@ -40,6 +40,7 @@ export default function ContactForm() {
           className={formTextInputStyle}
           value={form.name}
           onChange={handleChange}
+          required
         />
         <label htmlFor="email" className={formLabelStyle}>
           Email
@@ -47,9 +48,11 @@ export default function ContactForm() {
         <input
           id="email"
           name="email"
+          type="email"
           className={formTextInputStyle}
           value={form.email}
           onChange={handleChange}
+          required
         />
         <label htmlFor="phone" className={formLabelStyle}>
           Phone
@@ -57,6 +60,7 @@ export default function ContactForm() {
         <input
           id="phone"
           name="phone"
+          type="tel"
           className={formTextInputStyle}
           value={form.phone}
           onChange={handleChange}
@@ -70,6 +74,7 @@ export default function ContactForm() {
           className={formTextInputStyle}
           value={form.message}
           onChange={handleChange}
+          required
         />
         <label htmlFor="methodOfContact" className={formLabelStyle}>
           Preferred method of contact
@@ -80,6 +85,7 @@ export default function ContactForm() {
           className={formTextInputStyle}
           value={form.methodOfContact}
           onChange={handleChange}
+          required
         >
           <option value="" disabled>
             Choose a method of contact...
