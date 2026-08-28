@@ -57,6 +57,26 @@ export default function ContactFormPage() {
           </p>
         </div>
       </Section>
+
+      {/* Privacy notice */}
+      <div className="bg-cream flex items-center justify-center gap-2">
+        <p className="text-ink/70 m-4 text-sm">
+          We use the details you send here (your name, contact information, and
+          message) only to reply to your enquiry and, where relevant, to prepare
+          a quote. Your message reaches us through Web3Forms, a third-party form
+          service, and is delivered to our email inbox. We keep enquiries only
+          for as long as we need them to deal with your request, and we never
+          sell your details or use them for marketing. If you would like to know
+          what we hold about you, or to have it deleted, please email us at{" "}
+          <a
+            href="mailto:admin@fsgroundsandgardens.co.uk"
+            className="text-brand-accent hover:underline"
+          >
+            admin@fsgroundsandgardens.co.uk
+          </a>
+          .
+        </p>
+      </div>
     </>
   );
 }
