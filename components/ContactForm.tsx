@@ -193,14 +193,14 @@ export default function ContactForm() {
 
       {/* Status messages */}
       {status === "success" && (
-        <p className="text-ink/80">
+        <p className="text-ink/80" role="status">
           Thank you, we&apos;ve received your message, and we&apos;ll be in
           touch soon.
         </p>
       )}
 
       {status === "error" && (
-        <p className="text-ink/80">
+        <p className="text-red-600" role="alert">
           Something went wrong when sending your message. Please try again, or{" "}
           <a
             href="mailto:enquiries@fsgroundsandgardens.co.uk"
