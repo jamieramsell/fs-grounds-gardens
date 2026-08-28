@@ -15,11 +15,8 @@ export default function Contact() {
             <Button href="tel:+441234567890" variant="light">
               Call for a quote
             </Button>
-            <Button
-              href="https://instagram.com/fs.grounds.gardens"
-              variant="lightOutline"
-            >
-              Message us on Instagram
+            <Button href="/contact-us" variant="lightOutline">
+              Send us a message online
             </Button>
           </div>
         </div>
