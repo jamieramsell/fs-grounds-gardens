@@ -8,6 +8,7 @@ export default function ContactForm() {
     email: "",
     phone: "",
     message: "",
+    company: "",
     methodOfContact: "",
   });
 
@@ -19,7 +20,15 @@ export default function ContactForm() {
 
   function handleSubmit(e: SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log(form);
+
+    // Do not send forms completed by bots
+    if (form.company.trim() !== "") {
+      return;
+    }
+
+    // Exclude the company field from the form data
+    const { company, ...dataToSend } = form;
+    console.log(dataToSend);
   }
 
   const formLabelStyle = "block text-brand font-bold";
@@ -76,6 +85,25 @@ export default function ContactForm() {
           onChange={handleChange}
           required
         />
+        {/* Honeypot field */}
+        <div
+          className="absolute -m-px h-px w-px overflow-hidden border-0 p-0"
+          style={{ clip: "rect(0 0 0 0)" }}
+          aria-hidden="true"
+        >
+          <label htmlFor="company" className={formLabelStyle}>
+            Company
+          </label>
+          <input
+            id="company"
+            name="company"
+            className={formTextInputStyle}
+            value={form.company}
+            onChange={handleChange}
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </div>
         <label htmlFor="methodOfContact" className={formLabelStyle}>
           Preferred method of contact
         </label>
