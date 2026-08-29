@@ -12,9 +12,6 @@ export default function Contact() {
             no-obligation quote.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Button href="tel:+441234567890" variant="light">
-              Call for a quote
-            </Button>
             <Button href="/contact-us" variant="lightOutline">
               Send us a message online
             </Button>

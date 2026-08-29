@@ -23,15 +23,15 @@ export default function ContactFormPage() {
       <Section>
         <div className="space-y-6">
           <h2 className="text-brand text-3xl font-bold">Contact form</h2>
-          <ContactForm />
+          <p className="text-ink/80">
+            Unfortunately, our contact form is not available at the moment.
+            Sorry for any inconvenience caused.
+          </p>
 
           <h2 className="text-brand text-xl font-bold">
             Alternatively, you can use our social media
           </h2>
           <div className="flex flex-wrap gap-2">
-            <Button href="tel:+441234567890" variant="secondary">
-              Call us
-            </Button>
             <Button
               href="mailto:enquiries@fsgroundsandgardens.co.uk"
               variant="secondary"
@@ -51,10 +51,6 @@ export default function ContactFormPage() {
               Instagram
             </Button>
           </div>
-          <p className="text-ink/80">
-            Please note that email responses may come from a personal email
-            address.
-          </p>
         </div>
       </Section>
 
