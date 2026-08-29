@@ -19,11 +19,10 @@ export default function Hero() {
               <Button href="#contact">Get a free quote</Button>
             </div>
 
-            {/* placeholder hero image — swap for a real photo later */}
             <div className="bg-brand-light/20 relative aspect-[4/3] overflow-hidden rounded-lg">
               <Image
                 src="/hero.jpeg"
-                alt="A freshly maintained garden with trimmed hedges and a striped lawn"
+                alt="A freshly maintained garden, stripped back to reveal a patio below."
                 fill
                 priority
                 sizes="(min-width: 768px) 50vw, 100vw"
