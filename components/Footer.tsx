@@ -35,6 +35,14 @@ export default function Footer() {
           >
             Facebook
           </a>
+          <a
+            href="/privacy"
+            className="hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Privacy
+          </a>
         </nav>
       </div>
     </footer>

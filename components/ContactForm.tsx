@@ -175,14 +175,17 @@ export default function ContactForm() {
         <option value="text">Text</option>
       </select>
 
-      {form.methodOfContact === "email" && (
-        <p className="text-ink/80">
-          Please note that email responses may come from a personal email
-          address.
-        </p>
-      )}
-
       {/* Submit form button */}
+      <p className="text-ink/80">
+        We&apos;ll only use your details to reply to you. Your message reaches
+        our email inbox through Web3Forms, and we never share it for marketing.
+        Read our{" "}
+        <a href="/privacy" className="text-brand-accent hover:underline">
+          Privacy Policy
+        </a>
+        .
+      </p>
+
       <button
         type="submit"
         disabled={status === "sending"}
@@ -194,7 +197,7 @@ export default function ContactForm() {
       {/* Status messages */}
       <p className="text-ink/80" role="status">
         {status === "success" &&
-          "Thank you, we've received your message, and we'll be in touch soon."}
+          "Thank you, we&apos;ve received your message, and we&apos;ll be in touch soon."}
       </p>
 
       <p role="alert" className="font-medium text-red-600">
