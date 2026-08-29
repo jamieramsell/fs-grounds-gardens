@@ -62,7 +62,7 @@ export default function ContactFormPage() {
       </Section>
 
       {/* Privacy notice */}
-      <div className="bg-cream flex items-center justify-center gap-2">
+      {/*<div className="bg-cream flex items-center justify-center gap-2">
         <p className="text-ink/70 m-4 text-sm">
           We use the details you send here (your name, contact information, and
           message) only to reply to your enquiry and, where relevant, to prepare
@@ -79,7 +79,7 @@ export default function ContactFormPage() {
           </a>
           .
         </p>
-      </div>
+      </div>*/}
     </>
   );
 }
