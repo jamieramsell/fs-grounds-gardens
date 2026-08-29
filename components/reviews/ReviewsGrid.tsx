@@ -1,6 +1,7 @@
 import type { Review } from "@/lib/content/reviews";
 import Card from "../ui/Card";
 import { Star } from "lucide-react";
+import { Quote } from "lucide-react";
 
 type ReviewCardProps = {
   review: Review;
@@ -15,33 +16,42 @@ function ReviewCard({ review }: ReviewCardProps) {
         aria-label={`${review.rating} out of 5 stars`}
       >
         {/* Filled stars represent the number of stars given */}
-        {Array.from({ length: review.rating }, (_, i) => {
-          return (
-            <Star
-              key={i}
-              className="mx-0.5"
-              style={{ color: "#facc15" }}
-              fill="currentColor"
-              size={30}
-              aria-hidden
-            />
-          );
-        })}
+        {review.rating &&
+          Array.from({ length: review.rating }, (_, i) => {
+            return (
+              <Star
+                key={i}
+                className="mx-0.5"
+                style={{ color: "#facc15" }}
+                fill="currentColor"
+                size={30}
+                aria-hidden
+              />
+            );
+          })}
 
         {/* Hollow stars represent the difference between the given review and
          * the maximum (5)
          */}
-        {Array.from({ length: 5 - review.rating }, (_, i) => {
-          return (
-            <Star
-              key={i}
-              className="mx-0.5"
-              style={{ color: "#facc15" }}
-              size={30}
-              aria-hidden
-            />
-          );
-        })}
+        {review.rating &&
+          Array.from({ length: 5 - review.rating }, (_, i) => {
+            return (
+              <Star
+                key={i}
+                className="mx-0.5"
+                style={{ color: "#facc15" }}
+                size={30}
+                aria-hidden
+              />
+            );
+          })}
+
+        {/* If no rating has been given (customer quote), then show a speech
+         * marks symbol
+         */}
+        {!review.rating && (
+          <Quote className="text-brand-accent mx-0.5" size={30} aria-hidden />
+        )}
       </div>
       {review.quote && <p className="text-ink/70 mt-2">{review.quote}</p>}
       <p className="text-brand-light mt-2 text-xs">- {review.author}</p>

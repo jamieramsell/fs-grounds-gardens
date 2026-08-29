@@ -4,7 +4,7 @@ import loadCollection from "./collections";
 export const reviewSchema = z.object({
   author: z.string(),
   quote: z.string().optional(),
-  rating: z.number().int().min(1).max(5),
+  rating: z.number().int().min(1).max(5).optional(),
   order: z.number(),
 });
 
