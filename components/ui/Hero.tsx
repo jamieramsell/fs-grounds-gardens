@@ -16,7 +16,7 @@ export default function Hero() {
               <p className="text-ink/80 text-lg">
                 Reliable garden maintenance services across Leicestershire.
               </p>
-              <Button href="#contact">Get a free quote</Button>
+              <Button href="/contact-us">Get a free quote</Button>
             </div>
 
             <div className="bg-brand-light/20 relative aspect-[4/3] overflow-hidden rounded-lg">
