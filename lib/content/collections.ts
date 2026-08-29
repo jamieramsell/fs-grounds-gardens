@@ -19,6 +19,12 @@ export default function loadCollection<T>(
   const root = process.cwd();
   const folderPath = path.join(root, "content", folder);
 
+  // A collection folder may be absent (git doesn't track empty folders),
+  // so treat a missing folder as an empty collection rather than crashing.
+  if (!fs.existsSync(folderPath)) {
+    return [];
+  }
+
   // Retrieve all .md files
   let files = fs.readdirSync(folderPath);
   files = files.filter((filename) => filename.endsWith(".md"));
