@@ -44,7 +44,7 @@ function ReviewCard({ review }: ReviewCardProps) {
         })}
       </div>
       {review.quote && <p className="text-ink/70 mt-2">{review.quote}</p>}
-      <p className="text-brand-light mt-2 text-xs">Posted by {review.author}</p>
+      <p className="text-brand-light mt-2 text-xs">- {review.author}</p>
     </Card>
   );
 }
