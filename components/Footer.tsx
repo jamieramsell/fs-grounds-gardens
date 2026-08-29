@@ -13,12 +13,12 @@ export default function Footer() {
         </div>
 
         <nav className="flex flex-col gap-2 sm:flex-row sm:gap-6">
-          <a href="tel:+441234567890" className="hover:underline">
+          {/*<a href="tel:+441234567890" className="hover:underline">
             Call us
           </a>
           <a href="mailto:email@provider.com" className="hover:underline">
             Email us
-          </a>
+          </a>*/}
           <a
             href="https://instagram.com/fs.grounds.gardens"
             className="hover:underline"
@@ -26,6 +26,14 @@ export default function Footer() {
             rel="noopener noreferrer"
           >
             Instagram
+          </a>
+          <a
+            href="https://www.facebook.com/p/FS-Grounds-Gardens-61593549812509/"
+            className="hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Facebook
           </a>
         </nav>
       </div>

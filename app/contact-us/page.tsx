@@ -32,12 +32,19 @@ export default function ContactFormPage() {
             Alternatively, you can use our social media
           </h2>
           <div className="flex flex-wrap gap-2">
+            {/*<Button
+              href="tel:441234567890"
+              variant="secondary"
+            >
+              Email us
+            </Button>
+            
             <Button
               href="mailto:enquiries@fsgroundsandgardens.co.uk"
               variant="secondary"
             >
               Email us
-            </Button>
+            </Button>*/}
             <Button
               href="https://www.facebook.com/p/FS-Grounds-Gardens-61593549812509/"
               variant="secondary"
