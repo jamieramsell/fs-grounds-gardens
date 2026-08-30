@@ -25,10 +25,10 @@ export default function PrivacyPage() {
         <div className="max-w-2xl space-y-6">
           <h2 className="text-brand text-3xl font-bold">Who are we</h2>
           <p className="text-ink/80">
-            FS Grounds & Gardens (&quot;we&quot;, &quot;us&quot;, &quot;ourv)
-            provides grounds and garden maintenance services in Leicestershire.
-            For any questions about this policy or your personal information,
-            contact us at{" "}
+            FS Grounds & Gardens (&quot;we&quot;, &quot;us&quot;,
+            &quot;our&quot;) provides grounds and garden maintenance services in
+            Leicestershire. For any questions about this policy or your personal
+            information, contact us at{" "}
             <a
               href="mailto:admin@fsgroundsandgardens.co.uk"
               className="text-brand-accent hover:underline"
