@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   },
   description:
     "Reliable garden maintenance based in Rothley, Leicestershire. Hedge trimming, lawns, pruning, clearances and tidy-ups. Get a free quote today.",
+  metadataBase: new URL("https://fsgroundsandgardens.co.uk"),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
