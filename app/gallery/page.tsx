@@ -36,4 +36,8 @@ export default function GalleryPage() {
   );
 }
 
-export const metadata: Metadata = { title: "Gallery" };
+export const metadata: Metadata = {
+  title: "Gallery",
+  description:
+    "See recent work from FS Grounds & Gardens: hedge trimming, lawn care, pruning and garden clearances across Leicestershire.",
+};

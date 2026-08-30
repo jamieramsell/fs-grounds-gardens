@@ -40,7 +40,10 @@ export async function generateMetadata({
   params,
 }: PageProps<"/blog/[slug]">): Promise<Metadata> {
   const { slug } = await params;
-  const { title } = getPost(slug);
-  const metadata: Metadata = { title: title };
+  const { title, excerpt } = getPost(slug);
+  const metadata: Metadata = {
+    title: title,
+    description: excerpt ?? "Garden care tips from FS Grounds & Gardens",
+  };
   return metadata;
 }

@@ -84,4 +84,8 @@ export default function ContactFormPage() {
   );
 }
 
-export const metadata: Metadata = { title: "Contact" };
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with FS Grounds & Gardens for a free, no-obligation quote. Call, email or send a message for garden maintenance across Leicestershire.",
+};

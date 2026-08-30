@@ -54,4 +54,8 @@ export default function BlogPage() {
   );
 }
 
-export const metadata: Metadata = { title: "Blog" };
+export const metadata: Metadata = {
+  title: "Blog",
+  description:
+    "Seasonal garden tips and news from FS Grounds & Gardens. Practical advice on lawns, hedges, pruning and keeping your Leicestershire garden looking its best.",
+};

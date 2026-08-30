@@ -38,4 +38,8 @@ export default function ReviewsPage() {
   );
 }
 
-export const metadata: Metadata = { title: "Reviews" };
+export const metadata: Metadata = {
+  title: "Reviews",
+  description:
+    "Read what our customers say about FS Grounds & Gardens. Honest reviews of our garden maintenance, tidy-ups and lawn care across Leicestershire.",
+};

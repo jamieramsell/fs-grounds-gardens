@@ -201,4 +201,8 @@ export default function PrivacyPage() {
   );
 }
 
-export const metadata: Metadata = { title: "Privacy" };
+export const metadata: Metadata = {
+  title: "Privacy",
+  description:
+    "How FS Grounds & Gardens collects, uses and protects the personal data you share through our website and contact form. Read our privacy policy.",
+};
