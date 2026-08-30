@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { siteUrl } from "@/lib/site";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   },
   description:
     "Reliable garden maintenance based in Rothley, Leicestershire. Hedge trimming, lawns, pruning, clearances and tidy-ups. Get a free quote today.",
-  metadataBase: new URL("https://fsgroundsandgardens.co.uk"),
+  metadataBase: new URL(siteUrl),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
