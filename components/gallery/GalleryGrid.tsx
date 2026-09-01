@@ -18,12 +18,15 @@ type LightboxImageProps = {
  */
 function LightboxImage({ src, alt, label }: LightboxImageProps) {
   return (
-    <div className="relative mx-auto w-fit">
+    <div
+      className="relative mx-auto w-fit"
+      onClick={(e) => e.stopPropagation()}
+    >
       <img
         src={src}
         alt={alt}
         className="max-h-[70vh] w-auto max-w-full rounded object-contain max-md:max-h-[38vh]"
-      ></img>
+      />
 
       {label && (
         <p className="absolute top-4 left-4 rounded bg-black/70 px-4 py-2 text-white">
@@ -100,7 +103,6 @@ export default function GalleryGrid({ items }: GalleryGridProps) {
            * only contains one */}
           <div
             className={`relative mx-auto w-full ${focusedItem.before ? "max-w-6xl" : "max-w-3xl"}`}
-            onClick={(e) => e.stopPropagation()}
           >
             {focusedItem.before ? (
               <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
