@@ -85,7 +85,6 @@ export default function GalleryGrid({ items }: GalleryGridProps) {
                 loading="lazy"
                 className="h-auto w-full rounded-lg"
               />
-              <p className="text-ink/90 mt-1 text-sm">{item.caption}</p>
             </button>
           </li>
         ))}
