@@ -68,6 +68,18 @@ export default function GalleryGrid({ items }: GalleryGridProps) {
       document.removeEventListener("keydown", handleKey);
     };
   }, []);
+  // Lock the background page from scrolling while the image viewer is open.
+  useEffect(() => {
+    if (!focusedItem) {
+      return;
+    }
+
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [focusedItem]);
 
   return (
     <>
